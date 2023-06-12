@@ -1,0 +1,1033 @@
+.bg-body{
+    background-color: #171a1d;
+}
+
+#camera{
+    height: 500px;
+    width: 889px;
+    background-color: black;
+    position: absolute;
+    left:50%;
+    overflow: hidden;
+    transform: translatex(-50%);
+}
+
+/* Menu InGame */
+
+#menu-ingame{
+    padding:0;
+    margin:0;
+    background-image: url('../img/menu_ingame/menu_ingame_background.png');
+    background-size: 889px 500px;
+    width:889px;
+    height:500px;
+    z-index: 15;
+    display: none;
+}
+
+#stage-id{
+    top:102px;
+    position:absolute;
+    left:242px;
+    width:173px;
+    height:118px;
+}
+
+#stage-id-img{
+    position:absolute;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#area-id{
+    top:119px;
+    position:absolute;
+    left:487px;
+    width:132px;
+    height:40px;
+}
+
+#area-id-text{
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    padding:0;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+}
+
+#goal-id{
+    top:188px;
+    position:absolute;
+    left:487px;
+    width:132px;
+    height:100px;
+}
+
+#goal-id-text{
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    padding:0 20px 0 0;
+    position:absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+}
+
+#achiv_stag_id{
+    top:392px;
+    position:absolute;
+    left:333px;
+    width:132px;
+    height:100px;
+}
+
+#achiv_img_id{
+    position:absolute;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+/* First Menu */
+
+#menu{
+    padding:0;
+    margin:0;
+    background-image: url('../img/menu/FirstMenu_background.png');
+    background-size: 889px 500px;
+    width:889px;
+    height:500px;
+    transition: background 1s ;
+    user-select: none;
+}
+
+#menu-options-1{
+    margin-top:6rem;
+    position:absolute;
+    left:210px;
+    width:409px;
+}
+
+#menu-options-2{
+    display: none;
+    margin-top:6rem;
+    position:absolute;
+    left:210px;
+    width:409px;
+}
+
+#title{
+    transform: scale(0.8);
+}
+
+#menu-btn-play, #menu-btn-exit, #menu-btn-new-game{
+    transform: scale(0.6);
+    z-index: 2;
+}
+
+#hover-btn-play, #hover-btn-exit, #hover-btn-new-game{
+    position:absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#hover-btn-play{
+    top:115px;
+}
+
+#hover-btn-new-game{
+    top:18px;
+}
+
+#hover-btn-exit{
+    top:78px;
+}
+
+/* blackout */
+
+#blackout{
+    left:0;
+    top:0;
+    position: absolute;
+    opacity: 0;
+    width:889px;
+    height:500px;
+    transition: opacity 1s;
+    z-index: 0;
+}
+
+/* prologue */
+
+#prologue{
+    background-color: rgba(10,23,55,0);
+    color:white;
+    width:889px;
+    height:500px;
+    left:0;
+    top:0;
+    font-size: 2rem;
+    padding-left:3rem;
+    padding-top:10rem;
+    position: absolute;
+    display: none;
+    font-family: 'Barlow', sans-serif;
+    z-index: 11;
+    user-select: none;
+}
+
+#prologue-text{
+    opacity: 0;
+    display: none;
+    margin-left:10rem;
+    transition: opacity 0.8s;
+}
+
+#prologue-text-1, #prologue-text-2, #prologue-text-3, #prologue-text-4, #prologue-text-5, #prologue-text-6{
+    margin-top:3rem;
+    margin-left:16rem;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.8s;
+}
+
+/* First CutScene */
+
+#first_cutscene{
+    display: none;
+    padding:0;
+    margin:0;
+    background-size: 889px 500px;
+    width:889px;
+    height:500px;
+    transition: background 1s ;
+}
+
+/* Final CutScene */
+
+#final_cutscene{
+    display: none;
+    padding:0;
+    margin:0;
+    background-size: 889px 500px;
+    width:889px;
+    height:500px;
+    transition: background 1s ;
+}
+
+/* chat */
+
+#chat{
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+#chat_global{
+    transition: opacity 1s;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    height:391px;
+    width: 820px;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7346288857339811) 0%, rgba(0,0,0,0) 100%);
+}
+
+#chat_row{
+    height:391px;
+    margin:0;
+}
+
+#chat_question b{
+    color: #ff5d5d;
+}
+
+#chat_option_1, #chat_option_2, #chat_option_3{
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, rgba(0,255,217,1) 0%, rgba(0,255,217,0) 100%);
+    border-image-slice: 1;
+}
+
+#chat_option_1:hover, #chat_option_2:hover, #chat_option_3:hover{
+    background: rgb(0,135,157);
+    background: linear-gradient(90deg, rgba(0,135,157,1) 0%, rgba(0,135,157,0) 100%);
+}
+
+#chat_option_1:active, #chat_option_2:active, #chat_option_3:active{
+    background: rgb(0,255,187);
+    background: linear-gradient(90deg, rgba(0,255,187,1) 0%, rgba(0,255,187,0) 100%);
+}
+
+#chat_background{
+    transition: opacity 1s;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    width: 820px;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+/* map */
+
+#map{
+    filter: blur(0px);
+    transition: 2s;
+    user-select: none;
+}
+
+/* map a1 */
+
+#map_a1{
+    display:none;
+    background-size: 2265px;
+    background-repeat: no-repeat;
+    width:889px;
+    height:500px;
+    position: absolute;
+}
+
+#map_a1_e_esq{
+    z-index: 6;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 450px;
+}
+
+#map_a1_e_dir{
+    z-index: 6;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right:-590px;
+    width: 590px;
+}
+
+#map_a1_eggzitos{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 110px;
+    width: 150px;
+}
+
+#map_a1_porta{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 102px;
+    width: 300px;
+}
+
+#map_a1_tutorial_1{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 125px;
+    width: 380px;
+    transition: opacity 0.5s;
+}
+
+#map_a1_tutorial_2{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 125px;
+    width: 380px;
+    transition: opacity 0.5s;
+}
+
+#callie_id{
+    display: none;
+    position: absolute;
+    bottom: 107px;
+    width: 100px;
+    z-index: 5;
+    transition: bottom 2s;
+}
+
+#orb_id{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 110px;
+    width: 150px;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+/* map_b1 */
+
+#map_b1{
+    display:none;
+    background-size: 1950px;
+    background-repeat: no-repeat;
+    width:889px;
+    height:500px;
+    position: absolute;
+}
+
+#map_b1_madeira1, #map_b1_madeira2, #map_b1_madeira3{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    width: 1950px;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+#map_b1_passagem_cima{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    width: 1950px;
+}
+
+#map_a1_tutorial_3{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    width: 380px;
+    transition: opacity 0.5s;
+}
+
+/* map_c1 */
+
+#map_c1{
+    display:none;
+    background-size: 2350px;
+    background-repeat: no-repeat;
+    width:889px;
+    height:500px;
+    position: absolute;
+}
+
+#callie_id_house{
+    display: none;
+    position: absolute;
+    bottom: 105px;
+    width: 100px;
+    z-index: 5;
+    /* transition: bottom 2s;*/
+}
+
+#map_c1_porta{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 102px;
+    width: 300px;
+}
+
+/* map_d1 */
+
+#map_d1{
+    display:none;
+    background-size: 1550px;
+    background-repeat: no-repeat;
+    width:889px;
+    height:500px;
+    position: absolute;
+}
+
+#luca_id{
+    display: none;
+    position: absolute;
+    bottom: 121px;
+    width: 112px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    z-index: 5;
+}
+
+#map_d1_porta_1{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 104px;
+    width: 300px;
+}
+
+#map_d1_porta_2{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 104px;
+    width: 300px;
+}
+
+/* map_c2 */
+
+#map_c2{
+    display:none;
+    background-size: 1650px;
+    background-repeat: no-repeat;
+    width:889px;
+    height:500px;
+    position: absolute;
+}
+
+#map_c2_porta{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 104px;
+    width: 300px;
+}
+
+#books{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 140px;
+    width: 100px;
+}
+
+/* map_a2 */
+
+#map_a2{
+    display:none;
+    background-size: 1550px;
+    background-repeat: no-repeat;
+    width:889px;
+    height:500px;
+    position: absolute;
+}
+
+#map_a2_porta_1, #map_a2_porta_2, #map_a2_porta_3{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: 104px;
+    width: 1550px;
+}
+
+#map_a2_passagem_cima{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    width: 1550px;
+}
+
+/* map_b2 */
+
+#map_b2{
+    display:none;
+    background-size: 1800px;
+    background-repeat: no-repeat;
+    width:889px;
+    height:500px;
+    position: absolute;
+}
+
+#map_b2_porta{
+    z-index: 4;
+    display: none;
+    position: absolute;
+    bottom: -25px;
+    width: 2080px;
+}
+
+#luca_id_house{
+    display: none;
+    position: absolute;
+    bottom: 121px;
+    width: 112px;
+    z-index: 5;
+}
+
+/* character */
+
+#character_id{
+    display: none;
+    position: absolute;
+    transform: translatex(-50%);
+    left:50%;
+    z-index: 5;
+    filter: blur(0px);
+    transition: 2s, height 0s, bottom 0s;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+
+/* /////////////// MINIJOGO 1 /////////////// */
+
+#m1window {
+    display: none;
+    width: 899px;
+    height: 500px;
+    position: absolute;
+    background-size: 899px 500px;
+    font-family: 'Barlow', sans-serif;
+    transform: translateX(-50%);
+    left: 50%;
+    user-select: none;
+}
+
+#m1buttonBegin {
+    display: block;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 370px;
+    transition: ease-in-out 0.4s;
+}
+
+#m1buttonBegin:hover {
+    background-color: #38b8cd;
+}
+
+
+#m1buttonContinue {
+    display: none;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 370px;
+    transition: ease-in-out 0.4s;
+}
+
+#m1buttonContinue:hover {
+    background-color: #38b8cd;
+}
+
+#m1buttonTryAgain {
+    display: none;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+    top: 370px;
+    transition: ease-in-out 0.4s;
+}
+
+#m1buttonTryAgain:hover {
+    background-color: #38b8cd;
+}
+
+#m1buttonGiveUp {
+    display: none;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+    top: 370px;
+    transition: ease-in-out 0.4s;
+}
+
+#m1buttonGiveUp:hover {
+    background-color: #F28D3D;
+}
+
+#m1happy {
+    display: none;
+    position: absolute;
+    width: 17px;
+    height: 198px;
+    left: 758px;
+    top: 149px;
+    background-color: deepskyblue;
+}
+
+#m1happymove {
+    display: none;
+    position: absolute;
+    width: 17px;
+    left: 758px;
+    top: 149px;
+    background-color: midnightblue;
+    transition: height 0.7s;
+}
+
+#m1timer {
+    display: none;
+    position: absolute;
+    width: 17px;
+    height: 198px;
+    left: 790px;
+    top: 150px;
+    background-color: orange;
+}
+
+#m1timermove {
+    display: none;
+    position: absolute;
+    width: 17px;
+    left: 790px;
+    top: 150px;
+    background-color: midnightblue;
+    transition: height 0.7s;
+}
+
+#m1grub1 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 417px;
+    top: 98px;
+}
+
+#m1grub1click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 417px;
+    top: 98px;
+}
+
+#m1grub2 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 475px;
+    top: 130px;
+}
+
+#m1grub2click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 475px;
+    top: 130px;
+}
+
+#m1grub3 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 539px;
+    top: 167px;
+}
+
+#m1grub3click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 539px;
+    top: 167px;
+}
+
+#m1grub4 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 594px;
+    top: 199px;
+}
+
+#m1grub4click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 594px;
+    top: 199px;
+}
+
+#m1grub5 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 303px;
+    top: 160px;
+}
+
+#m1grub5click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 303px;
+    top: 160px;
+}
+
+#m1grub6 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 360px;
+    top: 193px;
+}
+
+#m1grub6click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 360px;
+    top: 193px;
+}
+
+#m1grub7 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 425px;
+    top: 229px;
+}
+
+#m1grub7click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 425px;
+    top: 229px;
+}
+
+#m1grub8 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 485px;
+    top: 265px;
+}
+
+#m1grub8click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 485px;
+    top: 265px;
+}
+
+#m1grub9 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 196px;
+    top: 219px;
+}
+
+#m1grub9click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 196px;
+    top: 219px;
+}
+
+#m1grub10 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 254px;
+    top: 250px;
+}
+
+#m1grub10click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 254px;
+    top: 250px;
+}
+
+#m1grub11 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 318px;
+    top: 290px;
+}
+
+#m1grub11click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 318px;
+    top: 290px;
+}
+
+#m1grub12 {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 379px;
+    top: 326px;
+}
+
+#m1grub12click {
+    display: none;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 379px;
+    top: 326px;
+}
+
+/* /////////////// MINIJOGO 2 /////////////// */
+
+#m2window {
+    display: none;
+    width: 899px;
+    height: 500px;
+    position: absolute;
+    background-size: 899px 500px;
+    font-family: 'Barlow', sans-serif;
+    transform: translateX(-50%);
+    left: 50%;
+    user-select: none;
+}
+
+#m2buttonBegin {
+    display: block;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 370px;
+    transition: ease-in-out 0.4s;
+}
+
+#m2buttonBegin:hover {
+    background-color: #38b8cd;
+}
+
+#m2buttonContinue {
+    display: none;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 370px;
+    transition: ease-in-out 0.4s;
+}
+
+#m2buttonContinue:hover {
+    background-color: #38b8cd;
+}
+
+#m2buttonTryAgain {
+    display: none;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+    top: 370px;
+    transition: ease-in-out 0.4s;
+}
+
+#m2buttonTryAgain:hover {
+    background-color: #38b8cd;
+}
+
+#m2buttonGiveUp {
+    display: none;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+    top: 370px;
+    transition: ease-in-out 0.4s;
+}
+
+#m2buttonGiveUp:hover {
+    background-color: #F28D3D;
+}
+
+#m2timer {
+    display: none;
+    position: absolute;
+    width: 16px;
+    height: 196px;
+    left: 739px;
+    top: 161px;
+    background-color: orange;
+}
+
+#m2timermove {
+    display: none;
+    position: absolute;
+    width: 16px;
+    left: 739px;
+    top: 161px;
+    background-color: midnightblue;
+    transition: height 0.3s;
+}
+
+#m2bookgame {
+    width: 370px;
+    height: 370px;
+    margin: 115px auto;
+    display: none;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0;
+    perspective: 1000px;
+
+}
+
+.m2book {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position: relative;
+    margin: 2px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.m2book:active {
+    transform: scale(.97);
+    transition: transform 0.2s;
+}
+
+.m2book.flip {
+    transform: rotateY(180deg);
+}
+
+.m2book-front, .m2book-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.m2book-front {
+    transform: rotateY(180deg);
+}

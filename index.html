@@ -1,0 +1,316 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="Miguel, Catarina, João, Mariana" name="author">
+    <meta content="NIGHT_OF_THE_STAG, Stag beetle" name="keywords">
+    <meta content="Game, Lab3, javascript" name="description">
+
+    <meta content="flex-basis=device-flex-basis, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="css/estilos.css" rel="stylesheet">
+
+    <title> THE NIGHT OF THE STAG </title>
+</head>
+
+<body class="bg-body">
+<camera id="camera">
+    <menu id="menu">
+        <section id="menu-options-1" class="row">
+            <article id="title" class="col-12 text-center">
+                <img class="img-fluid" src="img/menu/Title.png">
+            </article>
+            <article id="menu-btn-play" class="col-12 text-center mt-5">
+                <img class="img-fluid" src="img/menu/play.png">
+            </article>
+            <article id="hover-btn-play" class="col-12 text-center">
+                <img  class="img-fluid" src="img/menu/OnHover_play.png">
+            </article>
+        </section>
+
+        <section id="menu-options-2" class="row">
+            <article id="menu-btn-new-game" class="col-12 text-center">
+                <img class="img-fluid" src="img/menu/NewGame.png">
+            </article>
+            <article id="hover-btn-new-game" class="col-12 text-center">
+                <img  class="img-fluid" src="img/menu/OnHover_NewGame.png">
+            </article>
+            <article id="menu-btn-exit" class="col-12 text-center mt-2">
+                <img class="img-fluid" src="img/menu/exit.png">
+            </article>
+            <article id="hover-btn-exit" class="col-12 text-center">
+                <img  class="img-fluid" src="img/menu/OnHover_Exit.png">
+            </article>
+        </section>
+    </menu>
+
+    <blackout id="blackout"></blackout>
+
+    <menu_ingame id="menu-ingame">
+        <section id="stage-id" class="row">
+            <article class="col-12 img-fluid">
+                <img id="stage-id-img">
+            </article>
+        </section>
+        <section id="area-id" class="row">
+            <article id="area-id-text" class="col-12"></article>
+        </section>
+        <section id="goal-id" class="row">
+            <article id="goal-id-text" class="col-12"></article>
+        </section>
+        <section id="achiv_stag_id">
+            <article class="col-12 img-fluid">
+                <img id="achiv_img_id">
+            </article>
+        </section>
+    </menu_ingame>
+
+    <prologue id="prologue" class="container-fluid">
+        <section class="row">
+            <article class="col-12">
+                <p id="prologue-text"> The Outsider: </p>
+                <p id="prologue-text-1"> ... </p>
+                <p id="prologue-text-2"> Let me tell you a story. </p>
+                <p id="prologue-text-3"> About a dream I had, once. </p>
+                <p id="prologue-text-4"> Or was it really a dream? </p>
+                <p id="prologue-text-5"> I’ll let you decide for yourself. </p>
+                <p id="prologue-text-6"> It all started when I took that job... </p>
+            </article>
+        </section>
+    </prologue>
+
+    <CutScene id="first_cutscene"></CutScene>
+    <CutScene id="final_cutscene"></CutScene>
+
+    <map id="map">
+        <map_a1 id="map_a1">
+            <img id="map_a1_e_esq">
+            <img id="map_a1_e_dir">
+            <img id="map_a1_eggzitos">
+            <img id="map_a1_porta">
+            <img id="map_a1_tutorial_1">
+            <img id="map_a1_tutorial_2">
+            <img id="callie_id">
+            <img id="orb_id">
+        </map_a1>
+        <map_b1 id="map_b1">
+            <img id="map_b1_madeira1">
+            <img id="map_b1_madeira2">
+            <img id="map_b1_madeira3">
+            <img id="map_b1_passagem_cima">
+            <img id="map_a1_tutorial_3">
+        </map_b1>
+        <map_c1 id="map_c1">
+            <img id="callie_id_house">
+            <img id="map_c1_porta">
+        </map_c1>
+        <map_d1 id="map_d1">
+            <img id="luca_id">
+            <img id="map_d1_porta_1">
+            <img id="map_d1_porta_2">
+        </map_d1>
+        <map_c2 id="map_c2">
+            <img id="map_c2_porta">
+            <img id="books">
+        </map_c2>
+        <map_a2 id="map_a2">
+            <img id="map_a2_porta_1">
+            <img id="map_a2_porta_2">
+            <img id="map_a2_porta_3">
+            <img id="map_a2_passagem_cima">
+        </map_a2>
+        <map_b2 id="map_b2">
+            <img id="map_b2_porta">
+            <img id="luca_id_house">
+        </map_b2>
+    </map>
+
+    <chat id="chat">
+        <img id="chat_background" src="img/chat/Caixa_texto.png">
+        <chat id="chat_global">
+            <section class="row" id="chat_row">
+                <article class="col-12 align-self-start p-0">
+                    <p id="chat_question" class="m-0 pt-2 pb-2 px-4"> </p>
+                </article>
+                <article class="col-12 align-self-end p-0">
+                    <p class="m-0 py-3 px-4" id="chat_option_1"> </p>
+                    <p class="m-0 py-3 px-4" id="chat_option_2"> </p>
+                    <p class="m-0 py-3 px-4" id="chat_option_3"> </p>
+                </article>
+            </section>
+        </chat>
+    </chat>
+
+    <img id="character_id">
+
+    <!-- mini games ------------------------------------------------------------------- -->
+
+    <div id="m1window">
+        <img id="m1buttonBegin" src="img/minigame_daycare/Begin.png">
+        <img id="m1buttonContinue" src="img/minigame_daycare/Continue.png">
+        <img id="m1buttonTryAgain" src="img/minigame_daycare/tryagain.png">
+        <img id="m1buttonGiveUp" src="img/minigame_daycare/giveup.png">
+
+
+        <div id="m1happy"></div>
+        <div id="m1happymove"></div>
+        <div id="m1timer"></div>
+        <div id="m1timermove"></div>
+
+        <img id="m1grub1">
+        <img id="m1grub1click">
+        <img id="m1grub2">
+        <img id="m1grub2click">
+        <img id="m1grub3">
+        <img id="m1grub3click">
+        <img id="m1grub4">
+        <img id="m1grub4click">
+        <img id="m1grub5">
+        <img id="m1grub5click">
+        <img id="m1grub6">
+        <img id="m1grub6click">
+        <img id="m1grub7">
+        <img id="m1grub7click">
+        <img id="m1grub8">
+        <img id="m1grub8click">
+        <img id="m1grub9">
+        <img id="m1grub9click">
+        <img id="m1grub10">
+        <img id="m1grub10click">
+        <img id="m1grub11">
+        <img id="m1grub11click">
+        <img id="m1grub12">
+        <img id="m1grub12click">
+    </div>
+
+    <!-- MINIJOGO 2 -->
+
+    <div id="m2window">
+        <img id="m2buttonBegin" src="img/minigame_bonanza/Begin.png">
+        <img id="m2buttonContinue" src="img/minigame_bonanza/Continue.png">
+        <img id="m2buttonTryAgain" src="img/minigame_bonanza/tryagain.png">
+        <img id="m2buttonGiveUp" src="img/minigame_bonanza/giveup.png">
+
+        <div id="m2timer"></div>
+        <div id="m2timermove"></div>
+
+        <div id="m2bookgame">
+            <div class="m2book" data-name="shroom">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card1.png" alt="shroom">
+            </div>
+            <div class="m2book" data-name="shroom">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card1.png" alt="shroom">
+            </div>
+            <div class="m2book" data-name="sigil">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card2.png" alt="sigil">
+            </div>
+            <div class="m2book" data-name="sigil">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card2.png" alt="sigil">
+            </div>
+            <div class="m2book" data-name="gem">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card3.png" alt="gem">
+            </div>
+            <div class="m2book" data-name="gem">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card3.png" alt="gem">
+            </div>
+            <div class="m2book" data-name="crystal">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card4.png" alt="crystal">
+            </div>
+            <div class="m2book" data-name="crystal">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card4.png" alt="crystal">
+            </div>
+            <div class="m2book" data-name="lillies">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card5.png" alt="lillies">
+            </div>
+            <div class="m2book" data-name="lillies">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card5.png" alt="lillies">
+            </div>
+            <div class="m2book" data-name="flower">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card6.png" alt="flower">
+            </div>
+            <div class="m2book" data-name="flower">
+                <img class="m2book-back" src="img/minigame_bonanza/Card0.png" alt="bookfront">
+                <img class="m2book-front" src="img/minigame_bonanza/Card6.png" alt="flower">
+            </div>
+        </div>
+    </div>
+
+</camera>
+
+<!-- sound ------------------------------------------------------------------- -->
+
+<audio id="buttonClickSound">
+    <source src="sound/buttonClickSound.wav">
+</audio>
+<audio id="m1bgm" loop>
+    <source src="sound/m1bgm.mp3"/>
+</audio>
+<audio id="m1eating">
+    <source src="sound/m1eating.wav"/>
+</audio>
+<audio id="m2bgm" loop>
+    <source src="sound/m2bgm.mp3"/>
+</audio>
+<audio id="m2bookopen">
+    <source src="sound/m2bookopen.wav"/>
+</audio>
+<audio id="m2bookclose">
+    <source src="sound/m2bookclose.wav"/>
+</audio>
+<audio id="m2ding">
+    <source src="sound/m2ding.wav"/>
+</audio>
+<audio id="m1victory">
+    <source src="sound/m1victory.wav"/>
+</audio>
+<audio id="m1defeat">
+    <source src="sound/m1defeat.wav"/>
+</audio>
+<audio id="main_bgm" loop>
+    <source src="sound/main_bgm.mp3"/>
+</audio>
+<audio id="prologue_bgm" loop>
+    <source src="sound/prologue_bgm.wav"/>
+</audio>
+<audio id="first_cutscene_bgm" loop>
+    <source src="sound/first_cutscene_bgm.mp3"/>
+</audio>
+<audio id="final_cutscene_bgm">
+    <source src="sound/final_cutscene_bgm.mp3"/>
+</audio>
+<audio id="a1_bgm" loop>
+    <source src="sound/a1_bgm.mp3"/>
+</audio>
+<audio id="d1_bgm" loop>
+    <source src="sound/d1_bgm.mp3"/>
+</audio>
+<audio id="a2_bgm" loop>
+    <source src="sound/a2_bgm.mp3"/>
+</audio>
+<audio id="transform_bgm">
+    <source src="sound/transform.wav"/>
+</audio>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="js/game_code.js"></script>
+</body>
+
+</html>
