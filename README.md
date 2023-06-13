@@ -8,8 +8,8 @@ To play, simply open index.html in the browser of your choice or go to https://r
 
 # CREDITS
 
-Reed Oliveira - Lead Narrative and Game Designer
+Reed Oliveira - Lead Narrative Designer / Game Designer / Minigames
 
-Micatalyst - Lead Programmer
+Micatalyst - Lead Programmer / Codebase and Architecture
 
-Catarina Kinema - Art Director
+Catarina Kinema - Art Director / Character and Background Artist
