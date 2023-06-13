@@ -9,5 +9,7 @@ To play, simply open index.html in the browser of your choice.
 # CREDITS
 
 Reed Oliveira - Lead Narrative Design
+
 Micatalyst - Lead Programmer
+
 Catarina Kinema - Art Director
