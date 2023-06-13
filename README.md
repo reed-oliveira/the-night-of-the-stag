@@ -8,7 +8,7 @@ To play, simply open index.html in the browser of your choice.
 
 # CREDITS
 
-Reed Oliveira - Lead Narrative Design
+Reed Oliveira - Lead Narrative Designer
 
 Micatalyst - Lead Programmer
 
